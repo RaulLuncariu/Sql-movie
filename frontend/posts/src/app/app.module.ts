@@ -26,6 +26,9 @@ import { CreatePostComponent } from "./components/create-post/create-post.compon
 import { AuthInterceptorService } from "./services/auth-interceptor.service";
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FormsModule } from "@angular/forms";
+import { Ng2SearchPipeModule } from "ng2-search-filter";
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     PostsComponent,
     CreatePostComponent,
     NavComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     HttpClientModule,
     MatGridListModule,
     MatSidenavModule,
-    LayoutModule
+    LayoutModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [
     {
