@@ -7,12 +7,14 @@ import { HomeComponent } from "./components/home/home.component";
 import { PostsComponent } from "./components/posts/posts.component";
 import { LoginComponent } from "./components/login/login.component";
 import { SignupComponent } from "./components/signup/signup.component";
+import { SearchBarComponent } from "./components/search-bar/search-bar.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "posts", component: PostsComponent, canActivate: [AuthGuard] },
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
+  { path: "search-bar", component: SearchBarComponent},
   { path: "**", redirectTo: "" },
 ];
 

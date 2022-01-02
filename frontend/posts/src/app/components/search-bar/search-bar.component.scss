@@ -23,9 +23,9 @@ label {
   }
   
   .search-result li a {
-    border-bottom: 1px solid gray;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+    border-bottom: 1px solid rgb(226, 43, 156);
+    border-left: 1px solid rgb(226, 43, 156);
+    border-right: 1px solid rgb(226, 43, 156);
     display: inline-block;
     width: 100%;
     max-width: 600px;
@@ -35,8 +35,8 @@ label {
     color: black;
   
     &:hover {
-      background-color: #435A60;
-      color: white;
+      background-color: #4b4360;
+      color: rgb(61, 28, 211);
     }
   }
   
