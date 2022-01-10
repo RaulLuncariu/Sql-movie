@@ -1,5 +1,5 @@
 <button (click)="isOpen = !isOpen" mat-raised-button color="accent">
-  <mat-icon>add</mat-icon>Create post
+  <mat-icon>add</mat-icon>Rent a movie
 </button>
 <form
   *ngIf="isOpen"
@@ -9,19 +9,16 @@
   novalidate
 >
   <mat-form-field>
-    <mat-label>Post Title</mat-label>
+    <mat-label>Movie Title</mat-label>
     <input matInput formControlName="title" />
   </mat-form-field>
-  <mat-form-field>
-    <mat-label>Post body</mat-label>
-    <input matInput formControlName="body" />
-  </mat-form-field>
+    <app-date-picker><input matInput formControlName="body" /></app-date-picker> 
   <button
     color="accent"
     [disabled]="!form.valid"
     mat-raised-button
     type="submit"
   >
-    <span>Post</span>
+    <span>Rent</span>
   </button>
 </form>

@@ -29,6 +29,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from "@angular/forms";
 import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import { MatNativeDateModule } from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -41,6 +45,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     CreatePostComponent,
     NavComponent,
     SearchBarComponent,
+    DatePickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,10 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     MatSidenavModule,
     LayoutModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     {

@@ -14,6 +14,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class NavigationComponent implements OnInit {
   isAuthenticated = false;
+  isDarkTheme:boolean = false;
 
   constructor(private authService: AuthService, private router: Router, private breakpointObserver: BreakpointObserver) {}
 
@@ -27,11 +28,16 @@ export class NavigationComponent implements OnInit {
     this.authService.isUserLoggedIn$.subscribe((isLoggedIn) => {
       this.isAuthenticated = isLoggedIn;
     });
+    this.isDarkTheme = localStorage.getItem('theme') === "Dark" ? true:false;
   }
 
   logout(): void {
     localStorage.removeItem("token");
     this.authService.isUserLoggedIn$.next(false);
     this.router.navigate(["login"]);
+  }
+
+  storeThemeSelection(){
+    localStorage.setItem('theme',this.isDarkTheme?"Dark":"Light");
   }
 }
